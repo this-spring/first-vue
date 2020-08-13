@@ -1,0 +1,43 @@
+<!--
+ * @Author: xiuquanxu
+ * @Company: kaochong
+ * @Date: 2020-08-11 13:01:22
+ * @LastEditors: xiuquanxu
+ * @LastEditTime: 2020-08-14 00:33:16
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .cn {
+        color: red;
+    }
+</style>
+<script src="./vue.js"></script>
+<body>
+    <div id="app" :class="cn">
+        <div v-if='show'>
+            {{ message1 }}
+        </div>
+        <div>
+            {{ message2 }}
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    const v =  new Vue({
+        el: '#app',
+        data: {
+            show: true,
+            message1: "this is vue demo message1",
+            message2: "this is vue demo message2",
+            className: "cn",
+        }
+    })
+</script>
